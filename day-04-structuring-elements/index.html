@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Muddy Boots Landscaping</title>
+
+    <!-- The <style> tag allows us to write native CSS right within the head of our document. This is called 'embedded styles'. -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
     <!-- header+main+footer -->
-     <header>
+    <header>
         <img src="img/muddy-boots-logo.jpg" alt="Muddy Boots Landscaping Logo">
         <h1>Muddy Boots Landscaping</h1>
         <p>Transforming Your Outdoor Oasis!</p>
-     </header>
+    </header>
 
-     <main>
+    <main>
         <h2>About Our Services</h2>
-    
+
         <p>Uncompromised outdoor living—that's what we want for every client that we work with. This is why we create spaces that do more than just add aesthetic value to your property. It should be tailored to your needs, values, and lifestyle.</p>
 
         <p>Whether this means having an alternative space to work in or a place where you can relax and entertain, we can accomplish this with our design and build services.</p>
 
         <p>Our skilled designers leverage proven design principles for each project so it looks amazing—and is customized to fit your preferred style and taste! Once you’re ready, we can then move forward to build it for you, in phases or all at once.</p>
 
-Service Plans & Pricing 
-                                            Our Best Value Packages
-Package
-Features
-Price
-Basic Clean-Up
-Leaf removal, basic pruning
-$99
-Design & Planting
-Garden layout, new plant installation
-$299
-Full Transformation
-Custom hardscaping & planting
-$799
-     </main>
+        <h2>Service Plans &amp; Pricing</h2>
 
-     <footer>
+        <table>
+            <caption>Our Best Value Packages</caption>
+
+            <!-- This is the head of the table; it has information about the table's columns. -->
+            <thead>
+                <!-- In HTML, we write our tables row by row. -->
+                <tr>
+                    <!-- th*3 -->
+                    <!-- These are table headings, or the label for each individual column. -->
+                    <th>Package</th>
+                    <th>Features</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <!-- This is the body of the table's main data. -->
+            <tbody>
+                <tr>
+                    <!-- A <td> is a tabular data cell. -->
+                    <td>Basic Clean-Up</td>
+                    <td>Leaf removal, basic pruning</td>
+                    <td>$99</td>
+                </tr>
+            
+                <tr>
+                    <td>Design & Planting</td>
+                    <td>Garden layout, new plant installation</td>
+                    <td>$299</td>
+                </tr>
+
+                <tr>
+                    <td>Full Transformation</td>
+                    <td>Custom hardscaping & planting</td>
+                    <td>$799</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
         <h2>Get In Touch</h2>
 
         <!-- 
@@ -47,12 +83,13 @@ $799
             <br>: the line break element MUST ONLY BE USED FOR GOOD ... semantic HTML. It belongs only where a line break is important to the content (ex. mailing addresses, poetry, song lyrics ...).
         -->
         <address>
-           210 Glendale Ave <br>
+            210 Glendale Ave <br>
             St. Catharines, Ontario <br>
             R3T 1R2
         </address>
-        
+
         <p>&copy; 2025 Muddy Boots Landscaping</p>
-     </footer>
+    </footer>
 </body>
+
 </html>
