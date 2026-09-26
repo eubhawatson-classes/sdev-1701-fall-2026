@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS</title>
+    <!-- 
+        External Stylesheets
+
+        External styles are the preferred method of implementing CSS because it is the most maintainable method. If every page within a website points to a single CSS file, then all we need to do in order to update the website's look and feel is change something in that single file.
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+   
+</head>
+
+<body>
+    <header>
+        <h1>Cascading Style Sheets</h1>
+        <p>A style sheet is simply a text file that contains one or more rules that determine (through properties and
+            values) how certain elements in your Web page should be displayed.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Creating an Embedded Style Sheet</h2>
+            <p>An embedded style sheet is the second way to apply CSS to a page. It lets you set the styles directly in
+                the HTML document you want to affect (typically it goes in the head). Because the styles are in that
+                HTML file only, the CSS won't apply to other pages like a liked external style sheet does, and you won't
+                get the same caching benefits either. As mentioned earlier, an external style sheet is the recommended
+                approach for most cases, but it's important to understand your options for the times you'll need to
+                deviate.</p>
+            <section>
+                <h3>To create an embedded style sheet:</h3>
+                <ol>
+                    <li>Type style in the head section of the HTML document.</li>
+                    <li>Define as many style rules as desired.</li>
+                </ol>
+            </section>
+        </section>
+        
+        <section>
+            <h2>Applying Inline Styles</h2>
+            <p>Inline styles are the third way to apply CSS to HTML. However, they are by far the least desirable option
+                because they intertwine your content (HTML) and presentation (CSS), a slap in the face to best
+                practices.</p>
+            <p>An inline style affects only one element, so you lose one of the key benefits an external style sheet
+                provides: Write once and see everywhere. Imagine having to sift through a slew of HTML pages to make a
+                simple font color change, and you can see why inline styles aren't intended for regular use.</p>
+            <section>
+                <h3>To apply inline styles:</h3>
+                <ol>
+                    <li>Type style=" "within the HTML open tag of the element
+                        that you want to format.</li>
+                    <li>Create a style rule without curly brackets or a selector. The selector isn't necessary since
+                        you're placing it directly inside the desired element.</li>
+                    <li>To create additional style definitions, type ; (a semicolon) and repeat step 2.</li>
+                    <li>Type the final quote mark ".</li>
+                </ol>
+            </section>
+        </section>
+        <section>
+            <h2>Creating an External Style Sheet</h2>
+            <p>External style sheets are ideal for giving most or all of the pages on your Web site a consistent look.
+                You can define all your styles in an external style sheet and then tell each page on your site to load
+                the external sheet, thu ensuring that each will have the same settings. Although you will learn about
+                embedded and inline styles, adding CSS to your page from an external style sheet is a best practice, so
+                it is recommended that you use this method (allowing for occasional exceptions).</p>
+            <section>
+               
+
+                <h3>How to create and link an external style sheet:</h3>
+                <ol>
+                    <li>Create a new file document in your text editor.</li>
+                    <li>Save the document in the desired directory with the name "styles" and the extension ".css" to
+                        designate it as a Cascading Style Sheet.</li>
+                    <li>Create a link to this file in the head of the document (after the title tag) of each HTML page
+                        in which you wish to use the style sheet. &lt;link rel="stylesheet" href=" "&gt;</li>
+                    <li>Include the relative path to the CSS file in the href attribute."css/styles.css"
+                    </li>
+                </ol>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

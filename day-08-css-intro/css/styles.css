@@ -1,0 +1,15 @@
+/* 
+    Fallback Stack 
+
+    Because we do not know which fonts our users have installed (and each device has different fonts installed by default), we need to give some options for which fonts are used. The browser will try the first font listed, then work its way down if it doesn't find something that matches what the user has.
+*/
+
+body {
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+body {
+    color: #333333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
