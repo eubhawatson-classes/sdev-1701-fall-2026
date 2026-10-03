@@ -8,8 +8,76 @@ body {
     font-family: "Comic Sans MS", sans-serif;
 }
 
+/* 
+    The Cascade
+
+    The cascade says 'the last rule written is the last rule standing'. This means that the most recently parsed rule will be applied to the layout.
+*/
+
 body {
     color: #333333;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* 
+    Multiple Element Selector
+
+    We can write a list of elements, separated by a comma, to select multiple things at once.
+*/
+
+h1, 
+h2, 
+h3 {
+    color: #000000;
+    color: black;
+    color: rgb(0,0,0);
+    color: rgba(0,0,0,1);
+}
+
+/* 
+    Pseudo-Class Selector
+
+    This targets a particular element when it's in a specific state, or a user is doing a specific thing.
+*/
+
+h1:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: text-decoration 5s ease;
+}
+
+/* 
+    Typographic Scale
+
+    Typography is generally done in base-16. Most 'normal' sized paragraphs are 16px in font size.
+
+    Pixels are a great unit of measure for screens; however, they are an ABSOLUTE unit, which means they never change their length even in different contexts. 
+
+    For typography, we want our user to have maximum control over things like the font size. This is why we should relinquish a little bit of control as designers and use RELATIVE units for typography instead.
+
+    We can use the rem instead (root ephemeral unit). This means that everything is sized relative to the document root.
+
+    Let's calculate a typographic scale using base-16.
+
+    h1 -> 48px / 16 == 3rem
+    h2 -> 36px / 16 == 2.25rem
+    h3 -> 24px / 16 == 1.5rem
+    p  -> 16px / 16 == 1rem
+*/
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    /* font-size: 16px; */
+    font-size: 1rem;
+}
