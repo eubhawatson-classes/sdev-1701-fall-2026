@@ -1,0 +1,130 @@
+/* 
+    CSS Custom Properties (Variables) 
+
+    In CSS, we can assign labels (friendly names) to values that we use over and over again. 
+
+    Why? This can be easier to deal with than hexidecimal codes, but we can also change these values later on if we'd like and update the entire stylesheet. 
+
+    Why :root? This is the highest possible element in the document (usually <html>). By declaring all of our variables here, we make sure that they're available to (in scope for) all of the elements that we may want to assign these values to. 
+*/
+:root {
+    --molten-lava: #780000;
+    --flag-red: #c1121f;
+    --papaya-whip: #fdf0d5;
+    --deep-space-blue: #003049;
+    --steel-blue: #669bbc;
+}
+
+/* Find out the specificity (calculated weight) of the selector by hovering over it. */
+
+
+/* Element Selectors */
+
+/* 
+    margin: the distance between elements.
+    padding: the space around an element (inside its border).
+
+    Note: If the value is zero (0), we don't need to include a unit or measurement type (because 0km == 0px).
+*/
+body {
+    background-color: var(--papaya-whip);
+    color: #18181a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+    With padding, borders, and margins, we can add space to the top, right, bottom, or left; if we only give one value, it will be applied to all four sides.
+*/
+
+h1 {
+    border-bottom: 4px solid var(--flag-red);
+    color: var(--deep-space-blue);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 48px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section {
+    margin: 3rem;
+    max-width: 80ch;
+}
+
+/* 
+    Descendant Selector
+
+    The space in our selector statement implies nesting order; this says 'any unordered list inside of main should get these rules'.
+*/
+main section ul {
+    background-color: var(--deep-space-blue);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2;
+    list-style-type: circle;
+    /* 
+        When using two values for padding or margins, it will add the first value to the top and the bottom, and the second value to the left and the right.
+    */
+    padding: 48px 24px;
+}
+
+/* 
+    We can achieve the same thing by changing the line-height, but I wanted to add another descendant selector.  ;) 
+*/
+
+main section ul li {
+    margin: 12px 0;
+} 
+
+/* 
+    Class Selectors 
+
+    In order for class selectors to work, we need the class to appear: 
+
+    1. as an attribute in the HTML; and
+    2. as a class selector with rules in the CSS.
+
+    In CSS, classes always start with a full-stop / dot (.).
+
+    With class names, there are a few rules: 
+
+    1. Keep them semantic.
+    2. Do not start with a number.
+    3. Use all lowercase.
+    4. Use-kebab-case (hyphens).
+
+    Classes are flexible and can be assigned to multiple items in an HTML document.
+*/
+
+.links {
+    font-size: 1.125rem;
+    line-height: 2;
+    list-style-type: none;
+}
+
+/* 
+    This is targeting any anchor tag inside of something with a class of .links.
+*/
+.links a {
+    color: var(--molten-lava);
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+/* 
+    Whenever the user hovers over any anchor tag inside of something with a class of .links (OR actively presses the link!). 
+*/
+.links a:hover,
+.links a:active {
+    color: var(--flag-red);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
