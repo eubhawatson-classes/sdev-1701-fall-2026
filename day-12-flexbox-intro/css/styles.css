@@ -1,0 +1,87 @@
+/* Universal Styles */
+body {
+    color: #263238;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+/*  Utility Classes */
+.inner-container {
+    max-width: 960px;
+    margin: auto;
+}
+
+.flex-container {
+    background-color: #CFD8DC;
+    display: flex;
+    /* By default, flex-wrap is set to nowrap; this means that flexbox is only allowed to make one row. */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Layout */
+p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* Percentages are a relative unit. They are relative to the size of the parent container; in this case, the flex items are each one-half (50%) of the flex container's size. */
+.red,
+.orange {
+    /* 
+        We can use the calc() function to figure out how big each flex item (each box inside of the container) should be.
+
+        calc( (100% / no. of items ) - (total gap width / no. of items) );
+    */
+    width: calc((100% / 2) - (1.5rem / 2));
+}
+
+.red {
+ background-color: #D32F2F;
+}
+
+.orange {
+ background-color: #EF6C00;
+}
+
+.amber,
+.light-green,
+.green {
+    width: calc((100% / 3) - (3rem / 3));
+}
+
+.amber {
+ background-color: #FBC02D;
+}
+
+.light-green {
+ background-color: #7CB342;
+}
+
+.green {
+ background-color: #388E3C;
+}
+
+.cyan,
+.blue,
+.indigo,
+.violet {
+    width: calc((100% / 4) - (4.5rem / 4));
+}
+
+.cyan {
+ background-color: #00BCD4;
+}
+
+.blue {
+ background-color: #1976D2;
+}
+
+.indigo {
+ background-color: #3F51B5;
+}
+
+.violet {
+ background-color: #5E35B1;    
+}
