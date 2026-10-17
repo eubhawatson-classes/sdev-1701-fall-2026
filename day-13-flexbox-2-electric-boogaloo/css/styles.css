@@ -1,0 +1,84 @@
+/* 
+  Variables
+
+  Colours from TailwindCSS: https://v3.tailwindcss.com/docs/customizing-colors#default-color-palette   
+*/
+:root {
+  --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --slate-100: #f1f5f9;
+  --slate-300: #cbd5e1;
+  --slate-600: #4b5563;
+}
+
+/* Universal Styles */
+body {
+  background-color: var(--slate-100);
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.625;
+  text-align: center;
+}
+
+/* Utility Classes */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.inner-container {
+  margin: 0 auto;
+  max-width: 70rem;
+  padding: 1rem;
+}
+
+/* Typography */
+h1, h2 {
+  font-weight: 400;
+}
+
+p {
+  color: var(--slate-600);
+}
+
+/* Layout Styles */
+header p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+main {
+  margin: 2rem auto 6rem auto;
+}
+
+/* Card Components */
+.card {
+  background-color: white;
+  border: 1px solid var(--slate-300);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  flex: 1 1 13rem; /* flex-grow flex-shrink flex-basis */
+  /* By default, if we have rounded corners on our container, things like images still overflow; this hides that without us having to apply the same rounded corners to the image. */
+  overflow: hidden;
+  /* A width is great if we don't want something to change its size; in this case, we'll always have three cards per row. It looks great in a desktop view, but is very squishy in a narrower viewport. */
+  /* 
+    Width Formula (for fitting multiple flex items on a row)
+    100% -> This is the total amount of space that you want to use.
+    2rem -> This is our gap allowance (the total amount of space taken by the gaps between items).
+    3    -> The total number of items we want per row. 
+  */
+   /* width: calc((100% - 2rem) / 3); */
+   /* width: calc((100% / 3) - (2rem / 3)); */
+}
+
+.card img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 1rem 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+}
