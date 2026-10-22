@@ -1,0 +1,95 @@
+/* Base font & container */
+/* 1rem = 16px */
+body {
+  font-size: 100%;               /* = 1rem */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Utility Classes */
+
+.inner-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  color: #073B4C;
+  font-family: "Caveat", cursive;
+}
+
+h1 {
+  color: white;
+  font-size: 4.209rem;
+  letter-spacing: -0.125rem;
+  line-height: 0.65;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+/* Main Layout */
+
+header {
+  background-color: #E61445;
+  margin-bottom: 1.5rem;
+}
+
+header .flex-container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a,
+footer a {
+  color: white;
+  font-size: 1.125rem;
+  letter-spacing: 0.125rem;
+  text-decoration: none;
+}
+
+header a:hover,
+header a:focus,
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+header a:focus,
+footer a:focus {
+  border-radius: 1rem;
+  outline: 4px solid white;
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: #E61445;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+
+footer ul {
+  justify-content: center;
+}
+
+main img {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Flex Layout */
