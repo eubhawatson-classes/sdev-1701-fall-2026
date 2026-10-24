@@ -1,8 +1,28 @@
 /* Base font & container */
 /* 1rem = 16px */
 body {
-  font-size: 100%;               /* = 1rem */
+  font-size: 100%;
+  /* = 1rem */
   font-family: "Open Sans", sans-serif;
+
+  /* 
+    This is a bit of hack to make sure that our footer stays pinned to the bottom of the viewport. 
+
+    1. Make sure the body takes up the entire height of the viewport (min-height).
+
+    2. Turn on flexbox!
+
+    3. Change the flex-direction from row (default) to column. 
+
+    4. Tell the <main> to take up any extra space (if it's available), which shoves the <footer> out of the way.
+  */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex-grow: 1;
+  }
 }
 
 /* Utility Classes */
@@ -37,6 +57,7 @@ h1 {
 
 h2 {
   font-size: 3.157rem;
+  text-align: center;
 }
 
 h3 {
@@ -77,19 +98,70 @@ footer a:focus {
   padding: 0.5rem;
 }
 
-footer {
-  background-color: #E61445;
-  margin-top: 2rem;
-  padding: 1.5rem;
-}
-
-footer ul {
-  justify-content: center;
-}
-
 main img {
   margin-bottom: 1.5rem;
   width: 100%;
 }
 
 /* Flex Layout */
+
+main>section>.flex-container section {
+  border: 2px solid #FFD166;
+  border-radius: 4px;
+  /* grow | shrink | basis */
+  flex: 1 1 15rem;
+  padding: 1.25rem;
+
+  /* 
+    The & (ampersand) allows us to take the parent selector of this nested group and concatenate a pseudo-class selector onto the end of it.
+  */
+  &:nth-child(3) {
+    border: 2px solid #06d6a0;
+  }
+
+  &:nth-child(even) {
+    border: 2px solid #118AB2;
+  }
+
+  &:last-child {
+    border: 2px solid #ef476f;
+  }
+
+  /* 
+    Adding another element inside of the nested group will have it parsed as a descendant of the parent selector.
+  */
+  h3 {
+    text-align: center;
+  } /* end of h3 */
+}
+
+/* 
+  Tree-Structural Pseudo-Class Selector
+
+  This pseudo-class selector allows us to choose one (or more) specific item(s) based upon their overall position within a series of elements in a given HTML document.
+
+  Here, we're choosing the third section in a series of sections.
+*/
+/* main > section > .flex-container section:nth-child(3) {
+  border: 2px solid #06d6a0;
+}
+
+main > section > .flex-container section:nth-child(even) {
+  border: 2px solid #118AB2;
+}
+
+main > section > .flex-container section:last-child {
+  border: 2px solid #ef476f;
+} */
+
+/* Footer */
+
+footer {
+  background-color: #E61445;
+  margin-top: 2rem;
+  padding: 1.5rem;
+
+  ul {
+    justify-content: center;
+  }
+}
