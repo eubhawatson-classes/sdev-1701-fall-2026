@@ -1,0 +1,33 @@
+/* Variables */
+:root {
+    --heading-teal: #01B3B8;
+    --hero-teal: #92BEBF;
+    --leading-paragraph: #ECE9E9;
+    --yellow: #FFFBEB;
+    --lightest-teal: #F0FDFA;
+}
+
+/* Universal Styles */
+body {
+    font-family: "Lora", serif;
+    font-size: 100%;
+}
+
+/* Utility Classes */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1, 
+h2, 
+h3 {
+    color: #01B3B8;
+    font-family: "Oswald", sans-serif;
+}
