@@ -11,6 +11,14 @@
 body {
     font-family: "Lora", serif;
     font-size: 100%;
+
+    &.flex-container {
+        flex-direction: column;
+    }
+
+    main {
+        flex-grow: 1;
+    }
 }
 
 /* Utility Classes */
@@ -25,9 +33,117 @@ body {
 }
 
 /* Typography */
-h1, 
-h2, 
+h1,
+h2,
 h3 {
     color: #01B3B8;
     font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.8125rem;
+}
+
+h2 {
+    font-size: 2.25;
+    margin-bottom: 0.5rem;
+}
+
+/* Layout */
+
+header {
+    background-color: var(--hero-teal);
+
+    /* These are the flex items within the hero. */
+    section>div {
+        width: 50%;
+        min-height: 390px;
+    }
+
+    /* This is an intentionally empty <div>, which we have just to put the background image on. */
+    section>div:first-of-type {
+        background: url('../img/climbing-girl.jpg') top / cover no-repeat;
+    }
+
+    section>div:last-of-type {
+        /* align-items: center; */
+        flex-direction: column;
+        justify-content: center;
+
+        * {
+            padding-left: 3rem;
+        }
+    }
+
+    p {
+        color: var(--leading-paragraph);
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+main {
+    .flex-container {
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    section {
+        padding: 3.75rem 0;
+    }
+
+    section div:not(.flex-container) {
+        width: 80%;
+    }
+
+    section:first-of-type {
+        background-color: var(--yellow);
+    }
+
+    section:last-of-type {
+        background-color: var(--lightest-teal);
+    }
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid var(--heading-teal);
+    padding: 2rem 0;
+
+    .flex-container {
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    a {
+        color: #64748B;
+        font-size: 1.125rem;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/* 
+    Media Queries
+
+    Media queries allow the browser to check to see if something (a condition) is happening.
+
+    In this case, if we have a narrow viewport (below 765px wide), we will apply the nested rules; if the condition is not met (if the viewport is big), the rules are ignored.
+*/
+@media screen and (max-width: 765px) {
+    header section>div {
+        text-align: center;
+        width: 100%;
+    }
+
+    header section.flex-container {
+        flex-direction: column;
+    }
 }
