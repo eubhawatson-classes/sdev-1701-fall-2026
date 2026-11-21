@@ -1,0 +1,136 @@
+:root {
+  --color-brand: #0d6b5e;
+  --color-surface: #eef3f2;
+  --color-text: #1e2b2a;
+  --color-text-muted: #4b5b59;
+  --focus-offset: 2px;
+  --focus-ring: 3px solid #c2410c;
+  --font-size-base: 1.125rem;
+  --radius: 0.5rem;
+}
+
+body {
+  color: var(--color-text);
+  font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.inner-container {
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+/* Typography */
+
+h1, h2 {
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 800; 
+  margin: 1.5rem 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700; 
+  margin: 3rem 0 0.75rem;
+}
+
+/* 
+  +   -> direct sibling selector
+  ~   -> sibling selector
+
+  This says if there are any paragraphs that immediately follow (are direct siblings of) another paragraph, we'll add some space between them.
+*/
+p + p {
+  margin-top: 1rem;
+}
+
+code {
+  background-color: var(--color-surface);
+  border-radius: 0.25rem;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  padding: 0.1em 0.3em;
+}
+
+kbd {
+  background-color: white;
+  border: 1px solid #9fb0ad;
+  border-bottom-width: 3px;
+  border-radius: 0.3rem;
+  font-size: 0.875em;
+  padding: 0.05em 0.4em;
+}
+
+/* Basic Utility Classes */
+
+.intro {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  letter-spacing: -0.025em;
+}
+
+.back-link,
+.toc a {
+  border-radius: 0.25rem;
+  color: var(--color-brand);
+  font-weight: 700;
+}
+
+.back-link:focus-visible,
+.toc a:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* Table of Contents */
+
+.toc {
+  margin: 2.5rem 0 0;
+  padding-left: 1.75rem;
+
+  li {
+    margin-bottom: 1.5rem;
+
+    a {
+      font-size: 1.375rem;
+    }
+
+    p {
+      color: var(--color-text-muted);
+      margin: 0.25rem 0 0;
+    }
+  }
+}
+
+/* Demo Styles (Sandbox) */
+
+.demo {
+  background-color: var(--color-surface);
+  border-radius: 0.75rem;
+  margin: 2.5rem 0;
+  padding: 2.5rem 2rem;
+}
+
+.btn {
+  background-color: var(--color-brand);
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+}

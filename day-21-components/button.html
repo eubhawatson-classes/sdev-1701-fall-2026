@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Buttons | UI components</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700;800&display=swap">
+
+  <!-- Stylesheets -->
+   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <main class="inner-container">
+    <a href="index.html" class="back-link">&lt; All components</a>
+
+    <h1>Buttons</h1>
+    <p class="intro">A button has to stand out enough to look clickable, and it has to react when you use it. Each reaction is called a state.</p>
+
+    <h2>States</h2>
+    <ul>
+      <li><strong>Hover:</strong> move the cursor on top of it with your mouse.</li>
+      <li><strong>Focus:</strong> press <kbd>Tab</kbd> until the button gets an orange ring.</li>
+      <li><strong>Active:</strong> click and hold.</li>
+    </ul>
+
+    <div class="demo">
+      <!-- A link styled as a button. Use <a> when it GOES somewhere. -->
+      <a href="#" class="btn">Book a Tour</a>
+    </div>
+
+    <h2>Links vs buttons</h2>
+    <p>Use <code>&lt;a&gt;</code> when it goes somewhere, like another page. Use <code>&lt;button&gt;</code> when it performs a behaviour, like sending a form or saving. The <code>.button</code> class makes both look the same.</p>
+
+    <div class="demo">
+      <!-- A 'real' button. Use <button> when it DOES something. -->
+        <button type="button" class="btn">Save This Trail</button>
+    </div>
+
+    <p>They don't behave the same, though. Try right-clicking each one: the link offers to open in a new tab or copy its address, and the button doesn't, because it isn't going anywhere.</p>
+  </main>
+</body>
+
+</html>
