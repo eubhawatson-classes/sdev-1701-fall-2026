@@ -18,6 +18,27 @@
 </head>
 
 <body>
+  <header class="navbar">
+    <!-- The brand (logo) links to the home page. Users expect this behaviour. -->
+    
+    <a href="index.html" class="navbar-brand">UI Components</a>
+
+    <!-- 
+      ARIA -> Accessibility in Rich Internet Applications
+      
+      aria classes allow us to give different properties to similar elements on a page. For example, you might have multiple <nav>s on a page; you might have a top-level navbar, a sidebar in the main, and secondary links in the footer. Using ARIA labels allows us to tell screen readers which <nav> is for what.
+    -->
+    <nav aria-label="Main">
+      <ul class="navbar-links">
+        <!-- aria-current="page" -> marks the page you're currently on. -->
+        <li><a href="#" aria-current="page">Navbar</a></li>
+        <li><a href="button.html">Buttons</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="alerts.html">Alerts</a></li>
+        <li><a href="hero.html">Hero</a></li>
+      </ul>
+    </nav>
+  </header>
   <main class="inner-container">
     <a href="index.html" class="back-link">&lt; All components</a>
 

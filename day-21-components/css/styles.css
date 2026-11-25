@@ -24,19 +24,20 @@ body {
 
 /* Typography */
 
-h1, h2 {
+h1,
+h2 {
   line-height: 1.15;
 }
 
 h1 {
   font-size: 2.75rem;
-  font-weight: 800; 
+  font-weight: 800;
   margin: 1.5rem 0 1rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700; 
+  font-weight: 700;
   margin: 3rem 0 0.75rem;
 }
 
@@ -46,7 +47,7 @@ h2 {
 
   This says if there are any paragraphs that immediately follow (are direct siblings of) another paragraph, we'll add some space between them.
 */
-p + p {
+p+p {
   margin-top: 1rem;
 }
 
@@ -133,4 +134,100 @@ kbd {
   line-height: 1.2;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
+  /* The transition property allows us to animate the change between two states. */
+  transition: background-color 0.2s, transform 0.15s;
+
+  &:hover {
+    background-color: #0a5449;
+  }
+
+  &:focus-visible {
+    background-color: #0a5449;
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+
+  /* 
+  Skeuomorphic Design
+
+  This is a design approach where we make elements of a digital interface look like or behave like or sound like their real-world analogue counterparts. 
+
+  ex. a phone icon that uses a landline receiver; a camera application that uses a shutter sound (a click) when a photo is taken.
+*/
+
+  &:active {
+    background-color: #073f37;
+    transform: translateY(2px);
+  }
+}
+
+.btn-outline {
+  background-color: white;
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+
+  &:hover {
+    color: white;
+  }
+
+  &:focus-visible {
+    color: white;
+  }
+}
+
+/* Navbar */
+
+.navbar {
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #c5d1cf;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+
+  .navbar-brand {
+    color: var(--color-brand);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+
+    a {
+      border-radius: var(--radius);
+      color: var(--color-text);
+      font-weight: 700;
+      padding: 0.5rem 0.875rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #e3eeec;
+        color: var(--color-brand);
+      }
+    }
+
+    a[aria-current="page"] {
+      color: var(--color-brand);
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 0.4em;
+
+      &:hover {
+        background-color: unset;
+      }
+    }
+  }
+
+  .navbar-brand:focus-visible,
+  .navbar-links a:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
 }
