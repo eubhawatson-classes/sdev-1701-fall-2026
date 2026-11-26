@@ -213,6 +213,7 @@ kbd {
       }
     }
 
+    /* Square brackets are an attribute selector. This is how we could select an element with a specific attribute (like input type). */
     a[aria-current="page"] {
       color: var(--color-brand);
       text-decoration: underline;
@@ -231,3 +232,76 @@ kbd {
     outline-offset: var(--focus-offset);
   }
 }
+
+/* Hero Banner */
+
+.hero {
+  /* 
+    background -> This is a shorthand property for eight other background properties we can set. 
+
+    We are using:
+
+    background-image
+    background-position / background-size
+    background-repeat
+
+    We are using a gradient here that transitions from one colour to ... the same colour. The reason we're doing this is so we can put it on TOP of the image; a background colour will go behind it (on the bottom).
+  */
+  background: linear-gradient(rgba(30, 43, 42, 0.7), rgba(30, 43, 42, 0.7)), url('../img/hero-bg.avif') bottom / cover no-repeat;
+  color: white;
+  padding: 6rem 1.5rem;
+
+  .hero-content {
+    /* Remove the margin for Assignment 3... */
+    margin: 0 auto;
+    max-width: 40rem;
+
+    .hero-heading {
+      font-size: 3.5rem;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin: 0 0 2rem;
+    }
+
+    .hero-actions {
+      align-items: center;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .hero-link {
+      color: white;
+      font-weight: 700;
+      text-underline-offset: 0.2em;
+
+      &:hover {
+        text-decoration-thickness: 3px;
+      }
+
+      &:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-offset);
+      }
+    }
+  }
+}
+
+/*
+
+Assignment 3 Questions & Example
+
+```HTML
+<label for="destination">Destination City</label>
+<input class="form-input" type="text" id="destination" name="destination" placeholder="Enter destination city">
+```
+
+```CSS
+input[type="text"]::placeholder {
+    color: red;
+} 
+```
+
+*/
