@@ -24,6 +24,33 @@
     <h1>Alerts</h1>
     <p class="intro">Alerts tell people what just happened. Every alert here uses the same base class, <code>alert</code>, plus one variation class that only changes the colours.</p>
 
+    <div class="demo">
+      <!-- 
+        On a real website, alerts that appear after the user does something also get: `role="status"` (for news that can wait), or `role="alert"` for something more urgent (like errors). This is so that screen readers announce them.
+      -->
+
+      <!-- div.alert*4>span.alert-icon[aria-hidden="true"]+p>strong -->
+      <div class="alert alert-info">
+        <span class="alert-icon" aria-hidden="true">i</span>
+        <p><strong>Info</strong>: Trail reports are updated every morning.</p>
+      </div>
+
+      <div class="alert alert-success">
+        <span class="alert-icon" aria-hidden="true">i</span>
+        <p><strong>Success</strong>: You're booked for Grassi Lakes on Saturday. Your confirmation is in your inbox.</p>
+      </div>
+
+      <div class="alert alert-warning">
+        <span class="alert-icon" aria-hidden="true">i</span>
+        <p><strong>Warning</strong>: Bears have been spotted near Tent Ridge. Hike in groups and carry bear spray.</p>
+      </div>
+
+      <div class="alert alert-error">
+        <span class="alert-icon" aria-hidden="true">i</span>
+        <p><strong>Error</strong>: We couldn't process your payment. Check your card details and try again.</p>
+      </div>
+    </div> <!-- end of .demo area -->
+
     <h2>Tips for Alerts</h2>
 
     <p>Colour should never be the only clue as to what it's about. Each alert should also have an icon and a word, because not everyone can tell red from green.</p>

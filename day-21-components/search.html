@@ -23,6 +23,28 @@
 
     <h1>Search form</h1>
     <p class="intro">A search form is three pieces: a label, a text box and a button. The button is the same <code>.button</code> from the button page, reused.</p>
+
+    <div class="demo">
+      <!-- 
+        Forms
+
+        Every form needs two things in order to work:
+
+        action -> where does the data go? 
+        method -> how does it get there? (GET and POST are the main methods.)
+
+      -->
+
+      <!-- role="search" -> tells screen readers this is a search area. -->
+      <form action="submit.php" method="GET" class="search" role="search">
+
+        <label for="trail-search" class="search-label">Search trails</label>
+        <input type="text" id="trail-search" name="trail-search" class="search-input" placeholder="e.g., lakes" required>
+
+        <!-- <input type="submit" id="submit" name="submit" class="btn" value="Search"> -->
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </div>
   </main>
 </body>
 

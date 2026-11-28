@@ -289,6 +289,97 @@ kbd {
   }
 }
 
+/* Alerts */
+
+.alert {
+  align-items: center;
+  border-left: 6px solid;
+  border-radius: var(--radius);
+  display: flex;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+
+  .alert-icon {
+    align-items: center;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    font-weight: 800;
+    height: 1.75rem;
+    line-height: 1;
+    justify-content: center;
+    width: 1.75rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.alert-info {
+  background-color: #e8f0fb;
+  border-color: #2f6fca;
+  color: #173a6b;
+}
+
+.alert-success {
+  background-color: #e6f4ea;
+  border-color: #2f8a4a;
+  color: #1b4d2b;
+}
+
+.alert-warning {
+  background-color: #fdf3dc;
+  border-color: #c98a0c;
+  color: #5e3f05;
+}
+
+.alert-error {
+  background-color: #fbe9e7;
+  border-color: #c8382c;
+  color: #7a1f17;
+}
+
+/* Search Form */
+
+.search {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .search-label {
+    font-weight: 700;
+    width: 100%;
+  }
+
+  .search-input {
+    border: 2px solid #6f817e;
+    border-radius: var(--radius);
+    color: inherit;
+    flex: 1;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+
+    &::placeholder {
+      color: #5f6f6c;
+    }
+
+    &:hover {
+      border-color: var(--color-text);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-brand);
+      outline: var(--focus-ring);
+      outline-offset: var(--focus-offset);
+    }
+  }
+}
+
+
 /*
 
 Assignment 3 Questions & Example
